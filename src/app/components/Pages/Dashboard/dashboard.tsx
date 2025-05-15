@@ -16,12 +16,11 @@ import { DataTable } from './table/table-data'
 import { TaskDelete } from './task-delete/task-delete'
 import { TaskForm } from './task-form/task-form'
 
-// Carrega Joyride dinamicamente, desativando SSR
 const DynamicJoyride = dynamic(
   () => import('react-joyride').then(mod => mod.default),
   {
-    ssr: false, // Desativa SSR
-    loading: () => <div>Carregando tour...</div> // Opcional: placeholder
+    ssr: false,
+    loading: () => <div>Carregando tour...</div>
   }
 )
 
@@ -29,9 +28,8 @@ export const Dashboard = () => {
   const setDataTable = useSetAtom(tasksAtom)
   const setOpenModal = useSetAtom(openModalAtom)
 
-  const [runTour, setRunTour] = useState(false) // Tour não inicia automaticamente
-  const [openWelcomeModal, setOpenWelcomeModal] = useState(true) // Modal inicia aberto
-
+  const [runTour, setRunTour] = useState(false)
+  const [openWelcomeModal, setOpenWelcomeModal] = useState(true)
   const steps = [
     {
       target: '.init-tour',
@@ -40,6 +38,10 @@ export const Dashboard = () => {
     {
       target: '.breadcrumb-tour',
       content: 'Aqui você vê o caminho de navegação dentro do sistema.'
+    },
+    {
+      target: '.button-remove-tasks',
+      content: 'Clicando aqui você pode remover todas as tarefas do dashboard.'
     },
     {
       target: '.button-add-task',
@@ -186,7 +188,7 @@ export const Dashboard = () => {
               gap={2}
               sx={{ display: 'flex', flexDirection: 'row' }}
             >
-              <Box className="button-add-task">
+              <Box className="button-remove-tasks">
                 <ButtonStale
                   text="Limpar registros"
                   onClick={() => {
