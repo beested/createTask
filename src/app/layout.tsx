@@ -1,4 +1,3 @@
-// app/layout.tsx
 import { ThemeRegistry } from '@/context/theme-context'
 import { SnackbarProvider } from '@/context/useSnackBar'
 import type { Metadata } from 'next'

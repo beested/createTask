@@ -38,11 +38,10 @@ export function LoginContainer() {
 
       Cookies.set('token', 'true', { expires: 7 })
 
-      // Simula "esperar carregar"
       setTimeout(() => {
         router.push('/')
         setLoading(false)
-      }, 500) // 500ms de espera para o loading aparecer
+      }, 2000)
     } else {
       setError('Email ou senha inválidos.')
       setLoading(false)
@@ -57,7 +56,7 @@ export function LoginContainer() {
         status: 'Pendente',
         createdAt: new Date(
           now.getTime() - 2 * 24 * 60 * 60 * 1000
-        ).toISOString(), // 2 dias atrás
+        ).toISOString(),
         priority: 'Baixa'
       },
       {
@@ -66,9 +65,9 @@ export function LoginContainer() {
         status: 'Em andamento',
         createdAt: new Date(
           now.getTime() - 3 * 24 * 60 * 60 * 1000
-        ).toISOString(), // 3 dias atrás
+        ).toISOString(),
         priority: 'Média',
-        dueDate: new Date(now.getTime() + 2 * 24 * 60 * 60 * 1000).toISOString() // em 2 dias
+        dueDate: new Date(now.getTime() + 2 * 24 * 60 * 60 * 1000).toISOString()
       },
       {
         id: Math.floor(Math.random() * 10000),
@@ -76,9 +75,9 @@ export function LoginContainer() {
         status: 'Concluída',
         createdAt: new Date(
           now.getTime() - 5 * 24 * 60 * 60 * 1000
-        ).toISOString(), // 5 dias atrás
+        ).toISOString(),
         priority: 'Alta',
-        dueDate: new Date(now.getTime() - 1 * 24 * 60 * 60 * 1000).toISOString() // ontem
+        dueDate: new Date(now.getTime() - 1 * 24 * 60 * 60 * 1000).toISOString()
       },
       {
         id: Math.floor(Math.random() * 10000),
@@ -86,9 +85,9 @@ export function LoginContainer() {
         status: 'Pendente',
         createdAt: new Date(
           now.getTime() - 1 * 24 * 60 * 60 * 1000
-        ).toISOString(), // 1 dia atrás
+        ).toISOString(),
         priority: 'Alta',
-        dueDate: new Date(now.getTime() + 3 * 24 * 60 * 60 * 1000).toISOString() // em 3 dias
+        dueDate: new Date(now.getTime() + 3 * 24 * 60 * 60 * 1000).toISOString()
       },
       {
         id: Math.floor(Math.random() * 10000),
@@ -96,9 +95,9 @@ export function LoginContainer() {
         status: 'Concluída',
         createdAt: new Date(
           now.getTime() - 4 * 24 * 60 * 60 * 1000
-        ).toISOString(), // 4 dias atrás
+        ).toISOString(),
         priority: 'Baixa',
-        dueDate: new Date(now.getTime() - 2 * 24 * 60 * 60 * 1000).toISOString() // 2 dias atrás
+        dueDate: new Date(now.getTime() - 2 * 24 * 60 * 60 * 1000).toISOString()
       },
       {
         id: Math.floor(Math.random() * 10000),
@@ -106,7 +105,7 @@ export function LoginContainer() {
         status: 'Concluída',
         createdAt: new Date(
           now.getTime() - 4 * 24 * 60 * 60 * 1000
-        ).toISOString(), // 4 dias atrás
+        ).toISOString(),
         priority: 'Baixa'
       },
       {
@@ -115,9 +114,9 @@ export function LoginContainer() {
         status: 'Concluída',
         createdAt: new Date(
           now.getTime() - 5 * 24 * 60 * 60 * 1000
-        ).toISOString(), // 5 dias atrás
+        ).toISOString(),
         priority: 'Alta',
-        dueDate: new Date(now.getTime() - 1 * 24 * 60 * 60 * 1000).toISOString() // ontem
+        dueDate: new Date(now.getTime() - 1 * 24 * 60 * 60 * 1000).toISOString()
       },
       {
         id: Math.floor(Math.random() * 10000),
@@ -125,9 +124,9 @@ export function LoginContainer() {
         status: 'Concluída',
         createdAt: new Date(
           now.getTime() - 5 * 24 * 60 * 60 * 1000
-        ).toISOString(), // 5 dias atrás
+        ).toISOString(),
         priority: 'Alta',
-        dueDate: new Date(now.getTime() - 1 * 24 * 60 * 60 * 1000).toISOString() // ontem
+        dueDate: new Date(now.getTime() - 1 * 24 * 60 * 60 * 1000).toISOString()
       }
     ]
 

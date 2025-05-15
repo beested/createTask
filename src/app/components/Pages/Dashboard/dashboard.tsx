@@ -4,7 +4,7 @@ import { Box, Button, Container, Modal, Stack, Typography } from '@mui/material'
 import { useSetAtom } from 'jotai'
 import { Paintbrush, Plus } from 'lucide-react'
 import { useEffect, useState } from 'react'
-import dynamic from 'next/dynamic' // Adicione o import para dynamic
+import dynamic from 'next/dynamic'
 
 import { Breadcrumb } from '../../breadcrumb/breadcrumb'
 import { ButtonStale } from '../../button/button'

@@ -1,4 +1,3 @@
-// theme/light-theme.ts
 import { createTheme } from '@mui/material/styles'
 
 export const lightTheme = createTheme({
@@ -13,10 +12,10 @@ export const lightTheme = createTheme({
       styleOverrides: {
         root: {
           '& .MuiOutlinedInput-root': {
-            borderRadius: '12px' // Bordas arredondadas para TextFields
+            borderRadius: '12px'
           },
           '& .MuiOutlinedInput-notchedOutline': {
-            borderRadius: '12px' // Bordas arredondadas para o contorno
+            borderRadius: '12px'
           }
         }
       }
