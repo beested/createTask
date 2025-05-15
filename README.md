@@ -25,7 +25,6 @@ Aplicação web desenvolvida para gerenciar cadastros e acompanhamentos de taref
 - 📅 Criação, edição e exclusão de tarefas
 - 🕒 Controle de datas de início e término
 - ✅ Marcação de tarefas concluídas
-- 🔍 Filtros e ordenação de tarefas
 - 📊 Visualização gráfica de desempenho
 - 💾 Armazenamento local (LocalStorage) das tarefas
 
